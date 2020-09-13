@@ -25,6 +25,7 @@ exports.new = function (req, res) {
         emailScheduler.time = req.body.time;
         emailScheduler.isActive = true;
         emailScheduler.createdAt = new Date();
+        emailScheduler.callTransporter= true;
 
         emailScheduler.save(function (err) {
             if (err)

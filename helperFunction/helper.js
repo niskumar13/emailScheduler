@@ -18,7 +18,7 @@ function callTransporter(emailData) {
 function subscriptionMail(emailData) {
 
     var mailOptions = {
-        from: '"Subscription Mail" <donotreply@xyz.com>',
+        from: '"Subscription Mail" <'+config.senderMailId+'>',
         to: emailData.email,
         subject: 'some subject',
         text: 'some message',
@@ -32,7 +32,6 @@ function subscriptionMail(emailData) {
     rule.minute = sendingTime.getMinutes();
 
     //region of code where I setup scheduled email. 
-    // I get no errors, however it is not sending an email either.
 
     var j = schedule.scheduleJob(rule, function () {
         console.log('Sending reminder Email.', sendingTime);
