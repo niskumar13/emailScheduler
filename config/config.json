@@ -1,0 +1,7 @@
+{
+    "port":3000,
+    "dbName": "insuredMine",
+    "mongoUrl": "mongodb://localhost:27017/",
+    "smptUrl": "smtps://emailname@gmail.com:somepassword@smtp.gmail.com",
+    "senderMailId": "emailname@gmail.com" 
+}
